@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hospital</title>
+</head>
+<body>
+    <h1>Welcome to Spandana</h1>
+    <h2 class="form-title" id="form-tl">Resgistration Form</h2>
+    <form>
+        <div class="form-element">
+            <input type="text" placeholder="First Name" id="firstName" class="input-box">
+        </div>
+        <div class="form-element">
+            <input type="text" placeholder="Second Name" id="SecondName" class="input-box">
+        </div>
+        <div class="form-element">
+            <input type="number" placeholder="Age" id="age" class="input-box">
+        </div>
+        <div class="form-element">
+            <input type="text" placeholder="Address" id="address" class="input-box">
+        </div>
+        <div class="form-element">
+            <input type="number" placeholder="Phone Number" id="phoneNumber" class="input-box">
+        </div>
+        <div class="form-element">
+            <label>Male</label>
+            <input type="radio" id="radioBoxm" class="input-box" name="gender"><br>
+            <label>Female</label>
+            <input type="radio" id="radioBoxfm" class="input-box" name="gender">
+        </div>
+        <div class="form-element">
+            <button type="button" id="btn" onclick="printDetails()">
+                
+                    Register Patient
+               
+               
+            </button>
+        </div>
+    </form>
+
+</body>
+<script src="index.js"></script>
+<footer>
+    Copyright © Spandana Hospital
+</footer>
+</html>

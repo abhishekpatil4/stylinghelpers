@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>MARUTI-M</title>
+</head>
+<body>
+    <h1>Modify User Data</h1>
+    <div>
+        <h2>Modify User</h2>
+        <form action="/update" method="post" class="newForm flex">
+            <input type="number" name="newSSN" placeholder="ssn" class="newUserInput">
+            <br>
+            <input type="text" name="newName" placeholder="name" class="newUserInput" value="<%= data.name %>">
+            <br>
+            <input type="number" name="newSalary" placeholder="salary" class="newUserInput" value="<%= data.salary %>">
+            <br>
+            <input type="text" name="newDesignation" placeholder="designation" class="newUserInput" value="<%= data.designation %>">
+            <br>
+            <select name="newDepartment" id="cars" class="newUserInput" style="font-size: medium;" value="<%= data.department %>">
+                <option value="marketing">Marketing</option>
+                <option value="finance">Finance</option>
+            </select>
+            <br>
+            <input type="number" name="newExperience" placeholder="experience(in years)" class="newUserInput" value="<%= data.experience %>">
+            <br>
+            <button type="submit" name="modifyButton" style="width: 8rem; height:2rem; margin-top:1.5rem" value="<%= unique %>">Modify
+                User</button>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: bisque;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: large;
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ h2{
+    margin-top: 3rem;
+    font-size: x-large;
+  }
+
+ h1{
+    font-size: xx-large;
+    margin-top: 2rem;
+  }
+
+  button{
+    width: 5rem;
+    height: 2rem;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  input{
+    width: 14rem;
+    height: 1.8rem;
+    font-size: large;
+  }
+
+  select{
+    width: 8rem;
+    height: 2.2rem;
+  }
+
+  #loginInput{
+    margin: 0.5rem 0rem 0.5rem 0rem
+}
+
+.newUserInput{
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    width: 14rem;
+}
+
+.deleteButton{
+    background-color: rgb(242, 80, 80);
+}
+
+.modifyButton{
+    background-color: rgb(255, 225, 72);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>TATA-U</title>
+</head>
+<body>
+    <h1>welcome to user view</h1>
+    <a href="/">Home</a>
+    <a href="/login">Login</a>
+    <div>
+        <h2>Search employee by ID/SSN</h2>
+        <form action="/search" method="post">
+            <input type="number" placeholder="enter ssn" name="searchBySSN">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div>
+        <h2>Employee Data</h2>
+        <% newEmployeeItems.forEach(function(item){ %>
+                  <div>
+                      <span><b>Name - </b>Name <%= item.name %></span>
+                      <span><b>SSN - </b><%= item.ssn %></span>
+                      <span><b>Gender - </b><%= item.gender %></span>
+                      <span><b>Salary - </b><%= item.salary %></span>
+                      <span><b>Designation - </b><%= item.designation %></span>
+                      <span><b>Department - </b><%= item.department %></span>
+                      <span><b>Experience - </b><%= item.experience %></span>
+                      <span><b>Date Of Join - </b><%= item.date_of_join %></span>
+                  </div>
+              <br>
+          <% }) %>
+    </div>
+</body>
+</html>

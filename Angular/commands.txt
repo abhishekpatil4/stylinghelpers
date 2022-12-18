@@ -1,0 +1,3 @@
+ng new project-name -> to create a new project
+ng g c component-name -> to create new component
+ng g s service-name -> to create a service 

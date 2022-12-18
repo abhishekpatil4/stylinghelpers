@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>VRL Booking</title>
+</head>
+
+<body>
+    <h1 id="bookingHeading">Book Ticket</h1>
+
+    <input type="radio" id="d2b" name="sourceAndDestination"></input><span id="d2bspan">Dharwad to Banglore - Rs 800</span>
+    <br>
+    <input type="radio" id="m2b" name="sourceAndDestination"></input><span id="m2bspan">Mysore to Banglore - Rs 650</span>
+    <br>
+    <input type="radio" id="h2g" name="sourceAndDestination"></input><span id="h2gspan">Hubli to Goa - Rs 400</span>
+
+    <br>
+    <br>
+    <br>
+    <input type="text" id="bookingName" placeholder="Name">
+    <br>
+    <span id="bookingAgeSpan">Age</span><input type="number" id="bookingAge">
+    <br>
+    <input type="text" id="bookingNumber" placeholder="Phone Number">
+    <br>
+    <button type="button" onclick="bookTicket()" id="bookingButton">Book</button>
+</body>
+<script src="script.js"></script>
+</html>

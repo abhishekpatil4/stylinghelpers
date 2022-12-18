@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>MARUTI-S</title>
+</head>
+
+<body>
+    <h1>Search Result</h1>
+    <br>
+    <br>
+    <button><a href="/user">Back</a></button>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h2 class="title">Employee Data</h2>
+        <table class="center">
+            <tr>
+                <th>Name</th>
+                <th>SSN</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Experience</th>
+                <th>Date of Join</th>
+            </tr>
+            <% newEmployeeItems.forEach(function(item){ %>
+                <tr>
+                    <td><%= item.name %></td>
+                    <td><%= item.ssn %></td>
+                    <td><%= item.gender %></td>
+                    <td><%= item.salary %></td>    
+                    <td><%= item.designation %></td>
+                    <td><%= item.department %></td>
+                    <td> <%= item.experience %></td>
+                    <td><%= item.date_of_join %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+
+</html>

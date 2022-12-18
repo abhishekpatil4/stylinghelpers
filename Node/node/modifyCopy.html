@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>MARUTI-S</title>
+</head>
+
+<body>
+    <h1>Search Result</h1>
+    <br>
+    <br>
+    <button><a href="/user">Back</a></button>
+    <br>
+    <br>
+    <br>
+    <div>
+        <% if(status===1){ %>
+            <table class="center">
+                <tr>
+                    <th>Name</th>
+                    <th>SSN</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>Designation</th>
+                    <th>Department</th>
+                    <th>Experience</th>
+                    <th>Date of Join</th>
+                </tr>
+                <tr>
+                    <td>
+                        <%= data.name %>
+                    </td>
+                    <td>
+                        <%= data.ssn %>
+                    </td>
+                    <td>
+                        <%= data.gender %>
+                    </td>
+                    <td>
+                        <%= data.salary %>
+                    </td>
+                    <td>
+                        <%= data.designation %>
+                    </td>
+                    <td>
+                        <%= data.department %>
+                    </td>
+                    <td>
+                        <%= data.experience %>
+                    </td>
+                    <td>
+                        <%= data.date_of_join %>
+                    </td>
+                </tr>
+
+            </table>
+            <% } else if(status === 2){ %>
+                <span style="font-size: x-large">User found but different department</span>
+            <% } else{ %>
+                <span style="font-size: x-large">User not found!</span>
+            <% }%>
+    </div>
+</body>
+
+</html>

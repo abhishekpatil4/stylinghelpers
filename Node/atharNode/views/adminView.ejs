@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>TATA-A</title>
+</head>
+<body>
+    <h1>welcome to admin</h1>
+    <a href="/">Home</a>
+    <a href="/login">Login</a>
+    <div>
+        <h2>Add User</h2>
+        <form action="/admin" method="post" class="newForm">
+            <input type="text" name="newName" placeholder="name">
+            <input type="number" name="newSSN" placeholder="ssn">
+            <input type="text" name="newGender" placeholder="gender">
+            <input type="number" name="newSalary" placeholder="salary">
+            <input type="text" name="newDesignation" placeholder="designation">
+            <input type="text" name="newDepartment" placeholder="department">
+            <input type="number" name="newExperience" placeholder="experience(in years)">
+            <input type="date" name="newDateofjoin" placeholder="dateofjoin">
+            <button type="submit" name="newButton">Create User</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h2>Employee Data</h2>
+        <% newEmployeeItems.forEach(function(item){ %>
+              <form action="/delete" method="post">
+                  <div>
+                      <!-- <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()"> -->
+                      <span><b>Name - </b><%= item.name %></span>
+                      <span><b>SSN - </b><%= item.ssn %></span>
+                      <span><b>Gender - </b><%= item.gender %></span>
+                      <span><b>Salary - </b><%= item.salary %></span>
+                      <span><b>Designation - </b><%= item.designation %></span>
+                      <span><b>Department - </b><%= item.department %></span>
+                      <span><b>Experience - </b><%= item.experience %></span>
+                      <span><b>Date Of Join - </b><%= item.date_of_join %></span>
+                      <button type="submit" class="deleteButton" value="<%= item._id %>" name="deleteButton">DELETE</button>
+                      <!-- <button type="submit" class="dele">MODIFY</button> -->
+                  </div>
+              </form>
+              <br>
+          <% }) %>
+    </div>
+</body>
+</html>

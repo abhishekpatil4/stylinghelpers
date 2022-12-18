@@ -1,0 +1,13 @@
+<br>
+    <br>
+    <div>
+        <h1>Data</h1>
+        <% newEmployeeItems.forEach(function(item){ %>
+              <form action="/admin" method="post">
+                  <div>
+                      <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+                      <p><%= item.name %></p>
+                  </div>
+              </form>
+          <% }) %>
+    </div>

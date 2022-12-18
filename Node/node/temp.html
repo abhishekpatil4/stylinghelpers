@@ -1,0 +1,56 @@
+<br>
+    <br>
+    <div>
+        <h1>Data</h1>
+        <% newEmployeeItems.forEach(function(item){ %>
+              <form action="/admin" method="post">
+                  <div>
+                      <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+                      <p><%= item.name %></p>
+                  </div>
+              </form>
+          <% }) %>
+    </div>
+
+
+
+<!-- to submit form on checkbox state change -->
+    <!-- <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()"> -->
+
+
+    <td>
+        <form action="/modify" method="post">
+            <!-- <input type="number" placeholder="experience" name="updatedExperience"> -->
+            <!-- <button type="submit" class="modifyButton" value="<%= item._id %>" name="modifyButton">MODIFY</button> -->
+        </form>
+    </td>
+    
+
+
+
+
+    <!-- code for modifying user salary -->
+
+
+ 
+    app.post('/search', function (req, res) {
+        var notFoundmsg = 'User not found'
+        var status = 0;
+        List.findOne({ ssn: req.body.searchBySSN }, function (err, data) {
+            if (err) {
+                console.log(err)
+            } else {
+                    console.log('User found')
+                    status = 1
+                    res.render('search', { data: data, status: status })
+                    status = 0
+                }
+            }
+        })
+    })
+
+
+
+    <form action="/modify" method="post">
+        <button type="submit" class="modifyButton" value="<%= item._id %>" name="modifyButton">MODIFY</button>
+    </form>
